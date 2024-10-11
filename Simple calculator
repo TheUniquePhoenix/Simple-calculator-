@@ -1,0 +1,31 @@
+def math():
+    op = input("Que operação deseja realizar? \n1 = +\n2 = -\n3 = *\n4 = /\n5 = ^\n6 = // (Radical)\n>")
+    
+    if op not in ["1", "2", "3", "4", "5", "6"]:
+        print("Operação inválida")
+        return math()
+
+    if op == "6":
+        x = float(input("Radicando: "))
+        y = float(input("Radical: "))
+        print(x ** (1 / y))  # Corrigido o cálculo da raiz
+    else:
+        a = float(input("Primeiro número: "))
+        b = float(input("Segundo número: "))
+
+        # if statements
+        if op == "1":
+            print(a + b)
+        elif op == "2":
+            print(a - b)
+        elif op == "3":
+            print(a * b)
+        elif op == "4":
+            print(a / b)
+        elif op == "5":
+            print(a ** b)
+
+    return math()
+
+# Chama a função
+math()
